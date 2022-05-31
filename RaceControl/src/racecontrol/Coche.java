@@ -25,12 +25,12 @@ public class Coche {
 	}
 
 	public String getMarca() {
-		return Marca;
+		return marca;
 	}
 
 
 	public void setMarca(String marca) {
-		Marca = marca;
+		this.marca = marca;
 	}
 
 
