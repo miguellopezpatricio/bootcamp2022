@@ -2,6 +2,7 @@ package racecontrol;
 
 import java.util.List;
 
+// debería de ser una abstracta?
 public class Carrera {
 
 
@@ -12,8 +13,15 @@ public class Carrera {
 	public Carrera(String nombre, List<Garage> garages) {
 		this.nombre = nombre;
 		
-		
-	};
+	}
+	
+	// metodo para crear carrera
+	
+	// uso de un tipo de collection que permita guardar por orden los participantes de una carrera
+	// o mejor usar clases ?
+	
+	
+	
 	
 	
 }

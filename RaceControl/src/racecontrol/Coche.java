@@ -4,9 +4,10 @@ public class Coche {
 	
 	private static final int VELOCIDAD_MAX = 200; 
 
+	// propiedad id para diferenciar?
 	private String marca;
 	private String modelo;
-	private String pegataGarage;
+	// propiedades distancia???, puntuación???, velocidad???...
 	
 	
 	public Coche(String marca, String modelo) {
@@ -47,6 +48,13 @@ public class Coche {
 	public static int getVelocidadMax() {
 		return VELOCIDAD_MAX;
 	}
+
+	@Override
+	public String toString() {
+		return "Coche [marca=" + marca + ", modelo=" + modelo + "]";
+	}
+	
+
 	
 	
 	
