@@ -5,16 +5,20 @@ public class Coche {
 	private static final int VELOCIDAD_MAX = 200; 
 
 	// propiedad id para diferenciar?
+	
 	private String marca;
 	private String modelo;
+	private String pegataGarage;
+
 	// propiedades distancia???, puntuación???, velocidad???...
 	
 	
 	public Coche(String marca, String modelo) {
 		super();
+		this.pegataGarage = "";
 		this.marca = marca;
 		this.modelo = modelo;
-		
+	
 	}
 
 	public void acelera() {
@@ -23,6 +27,16 @@ public class Coche {
 	
 	public void frena() {
 		
+	}
+	
+	
+
+	public String getPegataGarage() {
+		return pegataGarage;
+	}
+
+	public void setPegataGarage(String pegataGarage) {
+		this.pegataGarage = pegataGarage;
 	}
 
 	public String getMarca() {
@@ -51,11 +65,8 @@ public class Coche {
 
 	@Override
 	public String toString() {
-		return "Coche [marca=" + marca + ", modelo=" + modelo + "]";
+		return "Coche [marca=" + marca + ", modelo=" + modelo + ", pegatina= "+ pegataGarage + "]";
 	}
-	
-
-	
 	
 	
 	

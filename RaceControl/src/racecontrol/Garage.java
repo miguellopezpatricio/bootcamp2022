@@ -5,22 +5,71 @@ import java.util.List;
 public class Garage{
 
 	private List<Coche>listaCoches;
-	private String pegataGarage;
-
+	private String nombreGarage;
 	
-	public Garage(List<Coche>listaCoches, String nombreGarage) {
-		
 
-		// Crear lista de coches
-		// Se le asigna la pegataGarage a cada garage
-		this.listaCoches = listaCoches;
-		this.pegataGarage = nombreGarage;
+	// CONSTRUCTOR
+	public Garage(String nombreGarage, List<Coche>listaCoches) {
 		
-		 
+		this.nombreGarage = nombreGarage;
+		this.listaCoches = listaCoches;
+		
+		// Recorrer listaCoches y asignar nombreGarage a cada coche
+		asignaPegata(nombreGarage, listaCoches);
+		
+		
 	}
 	
+
+	public void extraeCoche() {
+		
+	}
+	
+
+	public List<Coche> getListaCoches() {
+		return listaCoches;
+	}
+
+	
+
+
+
+
+	public void setListaCoches(List<Coche> listaCoches) {
+		this.listaCoches = listaCoches;
+	}
+
+
+
+
+
+	public String getNombreGarage() {
+		return nombreGarage;
+	}
+
+
+
+
+
+	public void setNombreGarage(String nombreGarage) {
+		this.nombreGarage = nombreGarage;
+	}
+
+
+
+
+
+	// ASIGNA PEGATA A CADA COCHE DEL GARAGE
+	private void asignaPegata(String nombreGarage, List<Coche> listaCoches) {
+
+		for(Coche coche:listaCoches) {
+			coche.setPegataGarage(nombreGarage);
+		}
+	}
+
+	// MUESTRA COCHES DEL GARAGE
 	public void muestraGarage() {
-		System.out.println("Equipo: " + this.pegataGarage);
+		System.out.println("Equipo: " + this.nombreGarage);
 		
 		for(Coche coche:listaCoches) {
 			System.out.println(coche.toString());

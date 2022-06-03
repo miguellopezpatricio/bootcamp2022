@@ -13,10 +13,23 @@ public class CarreraEliminacion extends Carrera{
 	 * la última posición, cada minuto, hasta que sólo quede un coche
 	 */
 	
+	private String nombreCarreraElim;
+	private List<Garage>garagesCarreraElimina;
 	
-	public CarreraEliminacion(String nombre, List<Garage> garages) {
-		super(nombre, garages);
-		// TODO Auto-generated constructor stub
+	
+	
+	public CarreraEliminacion(String nombreCarreraElim) {
+		super(nombreCarreraElim);
+		this.nombreCarreraElim = nombreCarreraElim;
+		
+		
 	}
 
+
+	
+	// MÉTODO PARA REALIZAR CARRERA ELIMINATORIA ENTRE COCHES Y SELECCIONAR AL GANADOR
+	@Override
+	public void startCarrera(List<Coche>participantes) {
+		
+	}
 }
