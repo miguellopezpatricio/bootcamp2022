@@ -21,6 +21,10 @@ public abstract class Carrera {
 	private String nombreCarrera;
 	private List<Coche>listaCoches;
 	
+	/*
+	 * CREAR ARRAYLISTS DE PODIOS O UN HASHMAP
+	 */
+	
 	
 	public Carrera(String nombreCarrera) {
 		this.nombreCarrera = nombreCarrera;
@@ -86,16 +90,8 @@ public abstract class Carrera {
 	}
 	
 	
-
-
-	
-	
 		
 	// uso de un tipo de collection que permita guardar por orden los participantes de una carrera
 	// o mejor usar clases ?
-	
-	
-	
-	
 	
 }

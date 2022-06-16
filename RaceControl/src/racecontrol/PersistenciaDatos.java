@@ -2,6 +2,7 @@ package racecontrol;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -36,6 +37,18 @@ import org.json.*;
 public class PersistenciaDatos {
 
 	private static String file = "coches.json";
+	
+	
+	/*
+	 *  Método que recupera los datos de uso en la aplicación
+	 * 
+	 *  Lo correcto:
+	 *  Un array de Torneo > Carreras > Garages > Coches 
+	 * 
+	 */ 
+	
+	
+	
 	
 	public static List<Coche> recuperaDatos() {
 	
@@ -99,7 +112,38 @@ public class PersistenciaDatos {
 		 return listaCoches;
 	}
 	
-	public static void guardaDatos() {
+	
+	/*
+	 * A este método se llama cada vez que se modifican los datos 
+	 * del array de objetos y se pasará a json para poder ser guardado en fichero
+	 */
+	public static void guardaDatos(List<Coche>listaCoches) throws IOException {
+	
+
+		JSONObject jo = new JSONObject();
+		
+		JSONArray jsonArray = new JSONArray();
+		jsonArray.add(listaCoches);
+		
+		jo.put("coches", jsonArray);
+
+		try (FileWriter fw = new FileWriter("coches.json")){
+			
+			fw.write(jo.toJSONString());
+			fw.flush();
+			
+		}catch(IOException ex) {
+			ex.printStackTrace();
+		}
+		
+		
+		
+		
+		
+
+		
+		
+		
 		
 	}
 	

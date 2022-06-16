@@ -1,9 +1,19 @@
-{"coches":[{"marca":"Ford","modelo":"Mustang"},
-{"marca":"Opel","modelo":"Meriva"},
-{"marca":"Seat","modelo":"Ibiza"},
-{"marca":"Renault","modelo":"Megane"},
-{"marca":"Ford","modelo":"Fiesta"},
-{"marca":"Opel","modelo":"Corsa"},
-{"marca":"Seat","modelo":"Panda"},
-{"marca":"Renault","modelo":"4L"}]}
-
+{
+	"coches": [
+		{
+			"MARCA": "Opel",
+			"MODELO": "Corsa",
+			"GARAGE": "SIN GARAGE"
+		},
+		{
+			"MARCA": "Seat",
+			"MODELO": "Ibiza",
+			"GARAGE": "SIN GARAGE"
+		},
+		{
+			"MARCA": "Renault",
+			"MODELO": "Clio",
+			"GARAGE": "SIN GARAGE"
+		}
+	]
+}

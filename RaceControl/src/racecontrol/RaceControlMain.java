@@ -1,5 +1,6 @@
 package racecontrol;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -11,7 +12,7 @@ public class RaceControlMain {
 	
 	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 				
 
 		/*
@@ -27,25 +28,13 @@ public class RaceControlMain {
 	
 	
 				// Recuperamos los coches del fichero json
-		List<Coche>listaCoches = PersistenciaDatos.recuperaDatos();
 		
-		Garage garage1 = new Garage("TopGarage",listaCoches);
-		
-		// garage1.muestraGarage();
-		
-		
-		// creando carrera y añadiendo coches
-		
-		Carrera carrera1 = new CarreraEstandar("VigoRace");
-		
-		carrera1.addCochesCarrera(garage1.getListaCoches());
-		
-		
+		// Garage.setListaGarages(new Garage("",listaCoches));
 		// carrera1.getInfoCarrera();
 		// carrera1.startCarrera(listaCoches);
 
 		
-		Menu.menuPrincipal(listaCoches, carrera1);
+		Menu.menuPrincipal();
 		
 
 		// CREAMOS TORNEO al que se le irán añadiendo carreras

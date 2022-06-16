@@ -26,10 +26,7 @@ public class Coche {
 	private String modelo;
 	private String pegataGarage;
 	private int velocidad;
-
-	
-	
-	// propiedades distancia???, puntuación???, velocidad???...
+	// private int distanciaCarrera;
 	
 	
 	public Coche(String marca, String modelo) {
@@ -107,7 +104,7 @@ public class Coche {
 			pegataGarage = "SIN GARAGE";
 		}
 		
-		return "Coche [marca=" + marca + ", modelo=" + modelo + ", garage= "+ pegataGarage + "]";
+		return "\nMARCA:" + marca + " MODELO: " + modelo + " GARAGE: "+ pegataGarage + "\n";
 	}
 	
 	

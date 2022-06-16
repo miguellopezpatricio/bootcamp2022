@@ -1,0 +1,34 @@
+{
+	"garages": [
+		{
+			"nombregarage": "TopGarage",
+			"coches": [
+				{
+					"MARCA": "Opel",
+					"MODELO": "Corsa",
+					"GARAGE": "TopGarage"
+				}
+			]
+		},
+		{
+			"nombregarage": "ExtraGarage",
+			"coches": [
+				{
+					"MARCA": "Seat",
+					"MODELO": "Ibiza",
+					"GARAGE": "ExtraGarage"
+				}
+			]
+		},
+		{
+			"nombregarage": "MaxGarage",
+			"coches": [
+				{
+					"MARCA": "Renault",
+					"MODELO": "Clio",
+					"GARAGE": "MaxGarage"
+				}
+			]
+		}
+	]
+}

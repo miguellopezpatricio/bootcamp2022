@@ -24,6 +24,30 @@ public class Torneo{
 		this.nombreTorneo = nombreTorneo;
 		this.carreras = carreras;
 	}
+
+	public String getNombreTorneo() {
+		return nombreTorneo;
+	}
+
+	public void setNombreTorneo(String nombreTorneo) {
+		this.nombreTorneo = nombreTorneo;
+	}
+
+	public List<Carrera> getCarreras() {
+		return carreras;
+	}
+
+	public void setCarreras(List<Carrera> carreras) {
+		this.carreras = carreras;
+	}
+
+	public int getCarrerasTorneo() {
+		return carrerasTorneo;
+	}
+
+	public void setCarrerasTorneo(int carrerasTorneo) {
+		this.carrerasTorneo = carrerasTorneo;
+	}
 	
 	
 

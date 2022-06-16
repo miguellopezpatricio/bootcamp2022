@@ -6,6 +6,7 @@ public class Garage{
 
 	private List<Coche>listaCoches;
 	private String nombreGarage;
+	private static List<Garage>listaGarages;
 	
 
 	// CONSTRUCTOR
@@ -20,10 +21,31 @@ public class Garage{
 		
 	}
 	
+	public Garage(String nombreGarage) {
+		this.nombreGarage = nombreGarage;
+	}
+	
+	public void addGarage(Garage garage) {
+		listaGarages.add(garage);
+	}
+
+	public static List<Garage> getListaGarages() {
+		return listaGarages;
+	}
+
+
+
+	public static void setListaGarages(Garage garage) {
+		listaGarages.add(garage);
+	}
+
+
 
 	public void extraeCoche() {
 		
 	}
+	
+	
 	
 
 	public List<Coche> getListaCoches() {

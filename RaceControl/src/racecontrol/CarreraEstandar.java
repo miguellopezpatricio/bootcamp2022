@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 public class CarreraEstandar extends Carrera{
 
@@ -60,7 +62,7 @@ public class CarreraEstandar extends Carrera{
 		int distanciaCarrera = 0;
 		double valorRandom;
 		
-		Map<String, Integer>resultadoCarrera = new HashMap<>();
+		Map<Coche, Integer>resultadoCarrera = new HashMap<>();
 		
 		for(Coche coche: participantes) {
 			coche.acelera();
@@ -89,46 +91,34 @@ public class CarreraEstandar extends Carrera{
 			}
 			
 			// finaliza la carrera y se añade resultado a HashMap
-			resultadoCarrera.put(coche.getMarca(), distanciaCarrera);
+			resultadoCarrera.put(coche, distanciaCarrera);
 		}
 		
-		// FALTA ORDENAR RESULTADO CARRERA POR VALOR
-		System.out.println("CARRERA FINALIZADA. RESULTADO: " + resultadoCarrera);
-		// sortHashMapByValues((HashMap<String, Integer>) resultadoCarrera);
+		// FALTA ORDENAR RESULTADO CARRERA,  POR VALOR
+		Map<Coche, Integer>resultadoOrdenado = resultadoCarrera.entrySet().stream()
+				.sorted(Entry.comparingByValue())
+				.collect(Collectors.toMap(Entry::getKey, Entry::getValue,(e1,e2)-> e1,LinkedHashMap::new));
+		
+		
+		
+		
+
+		
+		
+		System.out.println("CARRERA FINALIZADA. RESULTADO: " + resultadoOrdenado) ; 
+		
+	//	resultadoOrdenado.forEach((k,v)->System.out.println(k,v));
+		
+		// System.out.println("CARRERA FINALIZADA. RESULTADO: " + resultadoCarrera);
+		
+		
+		// 
+	}
+	
+	private void ordenaResultadoCarrera(Map<String, Integer>resultadoCarrera) {
+		
 	}
 
-	public void sortHashMapByValues(
-	        HashMap<String, Integer> passedMap) {
-	    List<String> mapKeys = new ArrayList<>(passedMap.keySet());
-	    List<Integer> mapValues = new ArrayList<>(passedMap.values());
-	    Collections.sort(mapValues);
-	    Collections.sort(mapKeys);
-
-	    LinkedHashMap<String, Integer> sortedMap =  new LinkedHashMap<>();
-
-	    Iterator<String> keyIt = mapKeys.iterator();
-	    while (keyIt.hasNext()) {
-	        String key = keyIt.next();
-	        Iterator<Integer> valueIt = mapValues.iterator();
-
-	        while (valueIt.hasNext()) {
-	            Integer val =valueIt.next();
-	            Integer comp1 = passedMap.get(val);
-	            Integer comp2 = val;
-
-	            if (comp1.equals(comp2)) {
-	                keyIt.remove();
-	                sortedMap.put(key, val);
-	                break;
-	            }
-	        }
-	    }
-	   
-	    for(String clave:sortedMap.keySet()) {
-	    	System.out.println(clave + ": " + sortedMap.get(clave));
-	    }
-	    
-	}
 	
 	
 
