@@ -1,0 +1,31 @@
+package ejercicioshilos.ejercicio36;
+
+public class MiClaseRunnable implements Runnable{
+
+	public MiClaseRunnable() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void run() {
+		
+		for(int i=0; i <=10;i++) {
+		System.out.println("Hola, soy el objeto runnable: " + Thread.currentThread().getName());
+		
+		
+		long rnd = (long) (Math.random()*1000);
+		try {
+			Thread.currentThread().sleep(rnd);
+			System.out.println("Hilo finalizado: " + Thread.currentThread().getName());
+
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			Thread.currentThread().getName();
+		}
+		}
+	}
+
+}
